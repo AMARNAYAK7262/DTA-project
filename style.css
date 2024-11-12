@@ -1,0 +1,81 @@
+.footer-container {
+    background-color: gray;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: serif;
+
+}
+
+.footer-container-item {
+    background-color: inherit;
+    height: 30vh;
+    display: flex;
+    top: 8px;
+    justify-content: space-evenly;
+
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+
+}
+
+.footer-items h2 {
+    color: seashell;
+}
+
+.footer-items button {
+    text-align: left;
+    padding: 0;
+}
+
+.fa {
+    color: seashell;
+}
+
+#footer-link {
+    text-decoration: none;
+    font-size: 22px;
+    color: seashell;
+}
+
+.modal-button {
+
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    color: seashell;
+}
+
+.icon {
+    display: flex;
+    gap: 50px;
+}
+
+.our-promise {
+    height: 10vh;
+    background-color: #dcdada;
+    display: flex;
+    font-family: serif;
+    justify-content: space-between;
+}
+
+
+.our-promise div {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    margin-right: 22px;
+    margin-bottom: 17px;
+}
+.our-promise-text{
+    margin-left: 86px;
+    }
+    .truck-icon{
+        margin-right: 86px;
+    }
