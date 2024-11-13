@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+    /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b0c4f29f; /* Light blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container Styling */
+        .payment-container {
+            background-color: #ffffff;
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid #d0e6f5; /* Light border for a polished look */
+        }
+
+        /* Header Styling */
+        .payment-container h2 {
+            text-align: center;
+            color: #0073b1; /* Deep blue for header */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Payment Options List Styling */
+        .payment-options {
+            margin-top: 20px;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            border: 1px solid #d0e6f5;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .payment-option:hover {
+            background-color: #f0f8ff;
+            transform: scale(1.02); /* Slight scale on hover */
+        }
+
+        .payment-option img {
+            width: 30px;
+            height: 30px;
+            margin-right: 12px;
+        }
+
+        .payment-option p {
+            margin: 0;
+            font-size: 16px;
+            color: #0073b1; /* Matching color with header */
+            font-weight: 500;
+        }
+
+        /* Payment Details Section */
+        .payment-method-details {
+            display: none;
+            margin-top: 20px;
+            border-top: 1px solid #d0e6f5;
+            padding-top: 20px;
+        }
+
+        .payment-method-details h3 {
+            font-size: 20px;
+            color: #005f73;
+            margin-bottom: 10px;
+        }
+
+        .payment-method-details p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .payment-method-details input {
+            padding: 10px;
+            width: 100%;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #d0e6f5;
+            font-size: 14px;
+        }
+
+        .payment-method-details button {
+            padding: 12px 20px;
+            background-color: #0073b1; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .payment-method-details button:hover {
+            background-color: #005f8a; /* Darker blue on hover */
+        }
+
+        /* Form Action Buttons */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .form-actions button {
+            padding: 12px 20px;
+            background-color: #0073b1; /* Blue buttons */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .form-actions button:hover {
+            background-color: #005f8a;
+        }
+
+        .form-actions button[type="button"]:nth-child(1) {
+            background-color: #6c757d; /* Grey for Cancel button */
+        }
+
+        .form-actions button[type="button"]:nth-child(1):hover {
+            background-color: #5a6268;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <h2>Checkout - Payment Options</h2>
+        <p>Please select your preferred payment method.</p>
+
+        <!-- Payment Methods List -->
+        <div class="payment-options">
+            <div class="payment-option" onclick="showPaymentMethod('debitCard')">
+                <img src="https://www.shutterstock.com/image-illustration/debit-card-isolated-on-white-260nw-542784994.jpg" alt="Debit Card">
+                <p>Debit Card</p>
+            </div>
+            <div class="payment-option" onclick="showPaymentMethod('creditCard')">
+                <img src="https://www.visa.com.bz/dam/VCOM/regional/lac/ENG/Default/Pay%20With%20Visa/Find%20a%20Card/Credit%20Cards/Classic/visaclassiccredit-400x225.jpg" alt="Credit Card">
+                <p>Credit Card</p>
+            </div>
+            <div class="payment-option" onclick="showPaymentMethod('cod')">
+                <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/05/cashondelivery1.jpg" alt="COD">
+                <p>Cash on Delivery</p>
+            </div>
+            <div class="payment-option" onclick="showPaymentMethod('upi')">
+                <img src="https://www.shutterstock.com/image-illustration/mobile-banking-simplified-upi-payments-260nw-2493991289.jpg" alt="UPI">
+                <p>UPI Payment</p>
+            </div>
+        </div>
+
+        <!-- Payment Method Details Section -->
+        <div class="payment-method-details" id="debitCardDetails">
+            <h3>Debit Card Payment</h3>
+            <p>Enter your debit card details below.</p>
+            <input type="text" placeholder="Card Number" required>
+            <input type="text" placeholder="Expiry Date (MM/YY)" required>
+            <input type="text" placeholder="CVV" required>
+            <!-- <button onclick="proceedToPayment('debitCard')">Pay with Debit Card</button> -->
+        </div>
+
+        <div class="payment-method-details" id="creditCardDetails">
+            <h3>Credit Card Payment</h3>
+            <p>Enter your credit card details below.</p>
+            <input type="text" placeholder="Card Number" required>
+            <input type="text" placeholder="Expiry Date (MM/YY)" required>
+            <input type="text" placeholder="CVV" required>
+            <!-- <button onclick="proceedToPayment('creditCard')">Pay with Credit Card</button> -->
+        </div>
+
+        <div class="payment-method-details" id="codDetails">
+            <h3>Cash on Delivery</h3>
+            <p>Pay when the product arrives at your address.</p>
+            <!-- <button onclick="proceedToPayment('cod')">Pay on Delivery</button> -->
+        </div>
+
+        <div class="payment-method-details" id="upiDetails">
+            <h3>UPI Payment</h3>
+            <p>Select your UPI payment method below.</p>
+            <div class="payment-options">
+                <div class="payment-option" onclick="showUpiPayment('phonePe')">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/phonepe-icon.png" alt="PhonePe">
+                    <p>PhonePe</p>
+                </div>
+                <div class="payment-option" onclick="showUpiPayment('googlePay')">
+                    <img src="https://zalen.s3.ap-south-1.amazonaws.com/images/news/1724487009_Gpay.jpeg" alt="Google Pay">
+                    <p>Google Pay</p>
+                </div>
+                <div class="payment-option" onclick="showUpiPayment('paytm')">
+                    <img src="https://static.startuptalky.com/2023/11/Paytm-logo-Startuptalky.jpg" alt="Paytm">
+                    <p>Paytm</p>
+                </div>
+                <div class="payment-option" onclick="showUpiPayment('amazonPay')">
+                    <img src="https://static.toiimg.com/thumb/msid-108034858,width-1280,height-720,resizemode-4/108034858.jpg" alt="Amazon Pay">
+                    <p>Amazon Pay</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+            <button type="button" onclick="window.history.back()">Cancel</button>
+            <button type="button" onclick="confirmPayment()">Confirm Payment</button>
+        </div>
+    </div>
+
+    <script>
+        function showPaymentMethod(paymentMethod) {
+            // Hide all details sections first
+            document.querySelectorAll('.payment-method-details').forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+            // Show the selected payment method details
+            document.getElementById(paymentMethod + 'Details').style.display = 'block';
+        }
+
+        function showUpiPayment(upiMethod) {
+            alert('You have selected ' + upiMethod + ' for payment!');
+        }
+
+        function proceedToPayment(method) {
+            alert('Processing payment via ' + method + '...');
+            // You can add further logic here like API calls to process the payment
+        }
+
+        function confirmPayment() {
+            alert('Your payment has been confirmed. Thank you for your purchase!');
+            // Proceed to confirmation or order summary page
+        }
+    </script>
+
+</body>
+</html>

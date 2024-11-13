@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background:#b0c4f29f;
+        }
+
+        /* Sign In Card */
+        .sign-in-container {
+            width: 360px;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        .sign-in-container h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            color: #333333;
+        }
+
+        /* Input Styling */
+        .sign-in-container input[type="email"],
+        .sign-in-container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: rgb(209, 227, 255);
+        }
+
+        /* Sign In Button */
+        .sign-in-container button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #047BD5;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .sign-in-container button:hover {
+            background-color: #001952;
+        }
+
+        /* Links Styling */
+        .sign-in-container .form-links {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555555;
+        }
+
+        .sign-in-container .form-links a {
+            color: #047BD5;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        .sign-in-container .form-links a:hover {
+            text-decoration: underline;
+            color: #022d92;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sign-in-container">
+    <h2>Sign In</h2>
+    <form action="#" method="POST">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+    </form>
+    <div class="form-links">
+        <a href="#">Forgot Password?</a>
+        <span>|</span>
+        <a href="#">Sign Up</a>
+    </div>
+</div>
+
+</body>
+</html>

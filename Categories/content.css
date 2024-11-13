@@ -1,0 +1,132 @@
+.grid-container{
+    display: grid;
+   
+    background-color: rgb(255, 253, 253);
+    grid-template-areas: 
+          "item1 item2 item3"
+          "item4 item4 item4"
+          "item5 item6 item7"
+          "item8 item8 item8";
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows:repeat(4,auto);
+    padding: 10px;
+    margin: 10px;
+}
+
+.griditem1{
+    grid-area: item1;
+}
+.griditem2{
+    grid-area: item2;
+}
+.griditem3{
+    grid-area: item3;
+}
+.griditem4{
+    grid-area: item4;
+}
+.griditem5{
+    grid-area: item5;
+}
+.griditem6{
+    grid-area:item6;
+}
+.griditem7{
+    grid-area:item7;
+}
+.griditem8{
+    grid-area:item8;
+}
+
+.griditem1,.griditem2,.griditem3,.griditem5,.griditem6,.griditem7,.griditem8{
+background-color: rgba(114, 179, 254, 0.61);
+padding: 20px;
+height: 400px;
+align-items: center;
+justify-content: center;
+align-content: center;
+text-align:center;
+margin: 10px 10px 10px 10px;
+
+
+}
+
+.griditem4{
+    background-color: rgb(253, 253, 253);
+padding: 20px;
+height: 400px;
+align-items: center;
+justify-content: center;
+align-content: center;
+text-align:center;
+margin: 10px 10px 10px 10px;
+
+}
+.griditem6{
+background-color: rgb(86, 86, 86);
+padding: 20px;
+height: 400px;
+align-items: center;
+justify-content: center;
+align-content: center;
+text-align:center;
+margin: 10px 10px 10px 10px;
+
+
+}
+.griditem8{
+    background-color:white;
+padding: 20px;
+height: 400px;
+align-items: center;
+justify-content: center;
+align-content: center;
+text-align:center;
+margin: 10px 10px 10px 10px;
+
+
+}
+.image{
+    width:320px;
+    height:400px;
+    border-radius: 2px solid black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.image:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+
+.image2 {
+        width: 700px;
+        height: 400px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+       
+        border-radius: 16px;
+    }
+.griditem4 .image2:hover {
+        transform: scale(1.1); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    }
+.image3{
+
+    width:320px;
+    height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.image3:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.image4{
+    width: 900px;
+    height: 400px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+       
+}
+.image4:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}

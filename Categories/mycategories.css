@@ -1,0 +1,45 @@
+.flex-container1{
+display:flex;
+flex-direction: row;
+justify-content: space-evenly;
+height: fit-content;
+margin: 20px;
+padding: 20px;
+flex-wrap: wrap; 
+text-align: center;
+}
+.flex-container1 h3{
+    color: #004494;
+}
+.categoryflex1{
+    width: 100%; 
+    margin-bottom: 10px;
+} 
+
+
+
+.flex-items1{
+border:2px solid whitesmoke;
+border-radius: 10px;
+padding: 10px;
+background-color: rgb(255, 255, 255);
+width: 200px;
+height: 250px;
+align-items: center;
+align-content: center;
+text-align:center;
+}
+
+.flex-items1 p{
+    margin-top: 30px;
+}
+
+.image1{
+    width:140px;
+    height:150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.image1:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}

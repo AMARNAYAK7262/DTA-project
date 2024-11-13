@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="navigation.css">
+        <script>
+            function openPopup() {
+    document.getElementById("popupOverlay").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popupOverlay").style.display = "none";
+}
+
+function insertPinCode() {
+    const newPinCode = document.getElementById("pincodeInput").value;
+    if (newPinCode.length === 6 && !isNaN(newPinCode)) { // Check if pin code is valid
+        document.querySelector(".pincode").textContent = newPinCode;
+        closePopup();
+    } else {
+        alert("Please enter a valid 6-digit pin code.");
+    }
+}
+
+        </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-section menu-icon">
+            <span>&#9776;</span> <!-- Menu Icon -->
+            <a href="/all-categories" class="navbar-text">ALL SPORTS</a>
+        </div>
+        <div class="navbar-section logo">
+            <img src="SportsVerse logo.png" alt="SportsVerse Logo"> 
+        </div>
+        <div class="navbar-section search-bar">
+            <input type="text" placeholder='Search for "Surfing Shorts"' class="search-input">
+        </div>
+        <div class="navbar-section delivery-location">
+            Delivery Location: <span class="pincode">560002</span>
+            <a href="#" class="change-link" onclick="openPopup()">Change</a>
+        </div>
+        
+        <!-- Popup Modal -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <h2>Enter Pin Code</h2>
+                <input type="text" id="pincodeInput" placeholder="Enter pin code" maxlength="6">
+                <button onclick="insertPinCode()">Insert</button>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+        
+        <div class="navbar-section icons">
+            <a href="/sign-in" class="icon-link">
+                <i class="fas fa-user"></i>
+                <span>Sign In</span>
+            </a>
+            <a href="/my-store" class="icon-link">
+                <i class="fas fa-store"></i>
+                <span>My Store</span>
+            </a>
+            <a href="/support" class="icon-link">
+                <i class="fas fa-headset"></i>
+                <span>Support</span>
+            </a>
+            <a href="/wishlist" class="icon-link">
+                <i class="fas fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+            <a href="/cart" class="icon-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
+        </div>        
+    </nav>
+</body>
+</html>

@@ -1,0 +1,340 @@
+*{
+    text-decoration: none;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    color:#1f2937;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: #ccd9fa;
+}
+.cart-address{
+    display: flex;
+    flex-direction: column;
+    border-radius:10px;
+    background-color: #F9FAFB;
+    flex-wrap: wrap;
+}
+.cart-main-container{
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    flex-wrap: wrap;
+    margin:0;
+    
+}
+
+.cart-header{
+    display: flex;
+    flex-direction: row;
+    align-content:center;
+    padding:0;
+    margin:0;
+    height:70px;
+    flex-wrap: wrap;
+}
+.cart-header h2{
+    margin-top: 30px;
+    margin-right: 600px;
+}
+.cart-company-logo{
+    flex:1;
+    align-items: center;
+    justify-content: flex-start;
+    padding:0px;
+    margin-left:15px;
+}
+.cart-guarantee-logo{
+    align-items: center;
+    padding:0;
+}
+
+.cart-body-container{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:15px;
+    background-color: #e0e7fa   ;
+    border-radius:5px;
+    width:85%;
+    margin : 0 auto;
+    padding:15px;
+    justify-content: center ;
+    flex-wrap: wrap;
+}
+.cart-address-heading-container{
+    padding:10px;
+    padding-top:5;
+    padding-bottom:0px;
+}
+.cart-store-home-address{
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    gap:10px;
+    
+}
+.cart-store-address{
+    border-radius: 5px;
+    background-color: 	#d7d9e6;
+}
+
+.cart-store-logo-name{
+    display:flex;
+    flex-direction: row;
+}
+.cart-store-logo{
+    padding:10px;
+}
+.cart-store-name-container{
+    padding:10px;
+    align-content: center;
+}
+.cart-shop-rating{
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.cart-shop-address-text{
+    padding-left:10px;
+    text-wrap: wrap;
+    padding-right:10px;
+}
+.cart-shop-address-text >span{
+    font-weight: bold;
+}
+
+.cart-shop-map{
+    padding:5px;
+
+}
+.cart-onmap-button{
+    padding:5px 15px 5px 15px;;
+    
+    background-color: black;
+    border-radius: 50px;
+    font-size: 1em;
+    gap:3px; 
+}
+.cart-onmap-button>a{
+    color:white;
+}
+
+.cart-home-address-container{
+    box-shadow: 1px solid black;
+    border-radius: 5px;
+    background-color: 	#d7d9e6;
+}
+
+.cart-home-logo-name{
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-home-logo{
+    padding: 10px;
+}
+.cart-person-name-container{
+    padding:10px;
+    align-content: center;
+}
+.cart-home-address-text{
+    padding-left:10px;
+    padding-right:5px;
+    text-wrap: wrap;
+}
+.cart-home-address-text >span{
+    font-weight: bold;
+}
+.cart-home-map-container{
+    display: flex;
+    flex-direction: row;
+    gap:15px;   
+}
+.cart-home-onmap{
+    padding:10px;   
+}
+.cart-home-onmap-button{
+    padding:5px 15px 5px 15px;;
+    background-color: black;
+    border-radius: 50px;
+    font-size: 1em;
+    color:white;
+    gap:3px;
+}
+.cart-home-onmap-button>a{
+    color: white;
+}
+.cart-home-changeadd-button>a{
+    color: white;
+}
+.cart-home-change-address{
+    align-content: center;
+}
+.cart-home-changeadd-button{
+    padding:3px 15px 5px 15px;
+    background-color: black;
+    height:34px;
+    border-radius: 50px;
+    font-size: 1em;
+    gap:3px;
+}
+
+.cart-inthecart{
+    display: flex;
+    flex-direction: column;
+    background-color: #F9FAFB;
+    margin-top:20px;
+    border-radius:10px;
+    flex-wrap: wrap;
+    
+}
+
+.cart-inthecart-container{
+    padding:10px;
+    padding-top:5;
+    padding-bottom:0px; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cart-inthecart-heading-container{
+
+    padding:10px;
+    padding-top:5;
+    padding-bottom:0px;
+}
+
+.cart-inthecart-check-delete{
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    padding-top:5;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.cart-item-delete{
+    padding:1px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline:none;
+}
+
+
+.cart-inthecart-content-container{
+    padding:10px;
+    padding-top:5;
+    padding-bottom:0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-wrap: wrap;
+    gap:15px;
+    flex-wrap: wrap;
+    
+}
+.cart-inthecart-content{
+    background-color: #d7d9e6;
+    margin-bottom:10px;
+    border-radius:10px;
+    width:200px;
+}
+
+
+.cart-inthecart-product-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:10px;
+    flex-wrap: wrap;
+}
+
+.cart-inthecart-content{
+    padding:10px;
+    padding-top:5;
+    padding-bottom:0px;
+
+}
+
+.cart-inthecart-product-name{
+    padding:5px;
+}
+.cart-inthecart-product-detail{
+    font-weight: light;
+    padding:5px;
+    padding-top:0;
+}
+
+.cart-inthecart-product-ref{
+    padding:5px;
+    color:red;
+    font-weight: bold;
+}
+
+.cart-inthecart-product-qty-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.cart-inthecart-quantity{
+    padding:5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cart-inthecart-quantity-text{
+    width:60px
+}
+
+.cart-inthecart-product-qty-container-2{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cart-inthecart-product-price{
+    padding:10px;
+    align-items: center;
+    justify-content: center;
+}
+.cart-inthecart-product-price>p{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.above-inthecart-price{
+    margin-top:10px;
+}
+
+
+.cart-checkout-button{
+    padding:10px;
+    margin:10px;
+    align-items: center;
+    float:right;
+    font-size:1.3em;
+    background-color:#181155;
+    
+    font-weight: bold;
+    border-radius:50px;
+}
+.cart-checkout-button a{
+    color: white;
+}
+.cart-checkout-logo{
+    align-items: center;
+}
+.cart-checkout-logo-button-container{
+    align-content: center;
+}
+
+.cart-checkout-button:hover{
+    background-color: #E0F7FA;
+    a{
+        color: #181155;
+    }
+}

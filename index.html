@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Sports Project/navigation.css" />
+    <link rel="stylesheet" href="./Categories/mycategories.css" />
+    <link rel="stylesheet" href="./Categories/content.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./Footer/footer.css">
+    <link rel=" stylesheet" href="./Content/content2.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <script>
+      function openPopup() {
+        document.getElementById("popupOverlay").style.display = "flex";
+      }
+
+      function closePopup() {
+        document.getElementById("popupOverlay").style.display = "none";
+      }
+
+      function insertPinCode() {
+        const newPinCode = document.getElementById("pincodeInput").value;
+        if (newPinCode.length === 6 && !isNaN(newPinCode)) {
+          // Check if pin code is valid
+          document.querySelector(".pincode").textContent = newPinCode;
+          closePopup();
+        } else {
+          alert("Please enter a valid 6-digit pin code.");
+        }
+      }
+    </script>
+
+    <style>
+      .carousel-inner img {
+        width: 1600px;
+        height: 300px;
+        object-fit: contain;
+      }
+      .carousel-indicators [data-bs-target] {
+        background-color: #d0d3d6; /* Make indicators blue for visibility */
+        margin-top: -37px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header" style="position: sticky;top: 0;z-index: 100;">
+      <nav class="navbar">
+        <div class="navbar-section-logo">
+            <a href="#">
+                <img src="SportsVerseName2.png" alt="Website Name" class="navbar-logo">
+            </a>
+        </div>
+        
+        <!-- <div class="navbar-section logo">
+            <img src="SportsVerse logo.png" alt="SportsVerse Logo"> 
+        </div> -->
+        <div class="navbar-section search-bar">
+            <input type="text" placeholder='Search for "Surfing Shorts"' class="search-input">
+        </div>
+        <div class="navbar-section delivery-location">
+            Delivery Location: <span class="pincode">560002</span>
+            <a href="#" class="change-link" onclick="openPopup()">Change</a>
+        </div>
+        
+        <!-- Popup Modal -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <h2>Enter Pin Code</h2>
+                <input type="text" id="pincodeInput" placeholder="Enter pin code" maxlength="6">
+                <button onclick="insertPinCode()">Insert</button>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+        
+        <div class="navbar-section icons">
+            <a href="./sign in/signin.html" class="icon-link">
+                <i class="fas fa-user"></i>
+                <span>Sign In</span>
+            </a>
+            <a href="./orderHistory/orderHistory.html" class="icon-link">
+                <i class="fas fa-store"></i>
+                <span>Orders</span>
+            </a>
+            <a href="./ContactUs/contact.html" class="icon-link">
+                <i class="fas fa-headset"></i>
+                <span>Contact Us</span>
+            </a>
+            <a href="./wishlist/wishlist.html" class="icon-link">
+                <i class="fas fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+            <a href="./Cart/cart2/cart.html" class="icon-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
+        </div>        
+    </nav>
+
+    </div>
+    <!-- Carousal -->
+    <div
+      id="carouselExample"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      style="max-width: 1600px; margin: auto"
+    >
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./Sports Project/Carousal page 1.png"
+            class="d-block w-100"
+            alt="Carousal Page 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./Sports Project/carousal page 2.png"
+            class="d-block w-100"
+            alt="Carousal Page 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./Sports Project/Carousal page 3.png"
+            class="d-block w-100"
+            alt="Carousal Page 3"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./Sports Project/carousal page 4.png"
+            class="d-block w-100"
+            alt="Carousal Page 4"
+          />
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CATEGORIES -->
+    <div class="flex-container1">
+      <div class="categoryflex1"><h3 >CATEGORIES </h3></div>
+      <div href="#" class="flex-items1">
+        <img
+          class="image1"
+          src="./Categories/accesories.jpeg"
+          alt="menswear"
+        />
+        <p>Men's Wear</p>
+      </div>
+      <div href="#" class="flex-items1">
+        <img
+          class="image1"
+          src="./Categories/womenswear.jpg"
+          alt="womenswear"
+        />
+        <p>Women's Wear</p>
+      </div>
+      <div href="#" class="flex-items1">
+        <img class="image1" src="./Categories/kidswear.jpg" alt="kidswear" />
+        <p>Kid's Wear</p>
+      </div>
+
+      <div href="#" class="flex-items1">
+        <img class="image1" src="./Categories/sports.jpg" alt="sports" />
+        <p>Equipments</p>
+      </div>
+      <div href="#" class="flex-items1">
+        <img class="image1" src="./Categories/shoes.jpg" alt="shoes" />
+        <p>Shoes</p>
+      </div>
+      <div href="#" class="flex-items1">
+        <img
+          class="image1"
+          src="./Categories/accessories.jpg"
+          alt="accessories"
+        />
+        <p>Accessories</p>
+      </div>
+    </div>
+
+
+    <!-- Content  -->
+    <div class="flex-container">
+      <div class="categoryflex" style="text-align: center;margin-top: 40px;"><h3 style="color:#004494;">PRODUCTS WITH EXCITING OFFERS  </h3></div>
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/sports2.jpg" alt="sports2">
+          <p class="p">Sports Shoes</p>
+          <p>30% Off</p>
+      </a>
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/badminton2.jpg" alt="badminton2">
+          <p class="p">Badminton</p>
+          <p>20% Off</p>
+      </a>
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/bagpack.jpg" alt="bagpack">
+          <p class="p">BagPack</p>
+          <p>10% Off</p>
+      </a>
+
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/tennisrackets.jpg" alt="tennisrackets">
+          <p class="p">Table Tennis</p>
+          <p>15% Off</p>
+      </a>
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/football.jpg" alt="football">
+          <p class="p">Football</p>
+          <p>10% Off</p>
+      </a>
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/bottles.jpg" alt="bottles">
+          <p class="p">Water Bottles</p>
+          <p>50% Off</p>
+      </a>
+  
+  </div>
+  <div class="flex-container2">
+      <div class="categoryflex2" style="text-align: center;color:#004494"> <h3> BESTSELLERS OF THIS WEEK  </h3></div>
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/bestsellera.jpg" alt="sports2">
+          <p class="p">Balls</p>
+          <p>Only Few Remaining</p>
+          
+      </a>
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/bestsellerb.jpg" alt="badminton2">
+          <p class="p">Gym Equipments</p>
+          <p>Out of Stock</p>
+      </a>
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/bestsellerc.jpg" alt="bagpack">
+          <p class="p">Jackets</p>
+          <p>Only 7 is Remaining</p>
+      </a>
+
+      <a href="#" class="flex-items">
+          <img class="images" src="./Content/bestsellerd.jpg" alt="tennisrackets">
+          <p class="p">Football Kit</p>
+          <p>Only Few Remaining</p>
+      </a>
+  </div>
+  
+  <div class="budget">
+    <div class="header-container" style="text-align: center;margin-top: 50px;color: #004494;margin-bottom: 30px;">  
+      <h3>BUDGET SPORT SHOPPING</h3>
+  </div>
+  
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <img src="./Content/budget3.jpg" alt="Backpack" class="card-image">
+                <div class="card-content">
+                    <p>Basketballs Under</p>
+                    <p class="price">₹199</p>
+                    <p>Store</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Content/budeget1.jpg" alt="Shirt and Shorts" class="card-image">
+                <div class="card-content">
+                    <p>Football Jersey</p>
+                    <p class="price">₹399</p>
+                    <p>Store</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Content/budget4.jpg" alt="Shoes and Jacket" class="card-image">
+                <div class="card-content">
+                    <p>Sneakers</p>
+                    <p class="price">₹799</p>
+                    <p>Store</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Content/budget5.jpg" alt="Jacket and Shorts" class="card-image">
+                <div class="card-content">
+                    <p>Running Jackets</p>
+                    <p class="price">₹999</p>
+                    <p>Store</p>
+                </div>
+            </div>
+            <div class="card">
+              <img src="./Cart/cart2/images/cart-tshirt.png" alt="Shirt and Shorts" class="card-image">
+              <div class="card-content">
+                  <p>Sports Tshirt</p>
+                  <p class="price">₹299</p>
+                  <p>Store</p>
+              </div>
+          </div>
+        </div>
+    </main>
+  </div>
+<div class="ourBlogs" style="height: 500px;">
+      <div class="header-container" style="text-align: center;margin-top: 50px;color: #004494;">
+         <h3>Our Blogs For YOU !</h3>
+          <!-- <button class="read-more-button" style="margin-left: 5px;">Read More!</button> -->
+      </div>
+
+  <main>
+      <section class="flex-container3">
+          <div class="blog-card">
+              <img src="./Content/campingblog.jpg" alt="Camping Accessories" class="card-image">
+              <div class="card-content">
+                  <h3>Ultimate Camping Accessories</h3>
+                  <p>(3 min Read)</p>
+                  <a href="#" class="read-now">Read Now</a>
+              </div>
+          </div>
+          <div class="blog-card">
+              <img src="./Content/playingblog.jpg" alt="playingblog" class="card-image">
+              <div class="card-content">
+                  <h3>Playing with all Strength and Stamina !</h3>
+                  <p>(3 min Read)</p>
+                  <a href="#" class="read-now">Read Now</a>
+              </div>
+          </div>
+          <div class="blog-card">
+              <img src="./Content/cyclingblog.jpg" alt="cyclingblog" class="card-image">
+              <div class="card-content">
+                  <h3>Riding to win, Riding to thrive!!</h3>
+                  <p>(3 min Read)</p>
+                  <a href="#" class="read-now">Read Now</a>
+              </div>
+          </div>
+          <div class="blog-card">
+              <img src="./Content/mountainblog.jpg" alt="Backpacking Equipment" class="card-image">
+              <div class="card-content">
+                  <h3>Top 12 Backpacking Equipments this Season</h3>
+                  <p>(3 min Read)</p>
+                  <a href="#" class="read-now">Read More</a>
+              </div>
+          </div>
+      </section>
+  </main>
+</div>
+
+<!-- Testimonials-->
+ <div class="testimonials">
+<h1 style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: #004494;"> Testimonials </h1>
+<div class="testimonial">
+<div class="snip1533">
+  <figcaption>
+    <blockquote>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, laudantium!</p>
+    </blockquote>
+    <h3>Harvey Specter</h3>
+    <h4>Google Inc.</h4>
+  </figcaption>
+</div>
+<div class="snip1533">
+  <figcaption>
+    <blockquote>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, suscipit?</p>
+    </blockquote>
+    <h3>Micheal Ross</h3>
+    <h4>Facebook</h4>
+  </figcaption>
+</div>
+<div class="snip1533">
+  <figcaption>
+    <blockquote>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, nulla. </p>
+    </blockquote>
+    <h3>Louis Litt</h3>
+    <h4>Twitter</h4>
+  </figcaption>
+</div>
+</div>
+</div>
+
+    <!-- Footer  -->
+    <footer>
+        <div class="our-promise">
+            <h3 class="our-promise-text" style="color: black;">
+                OUR PROMISE
+            </h3>
+            <div>
+                <h3 style="color: black;">&#128522; Happy Customers</h3>
+                <h3 style="color: black;"><i style="color: rgb(255, 166, 0);" class="fa fa-star" style="font-size:30px"></i> Premium Quality
+                </h3>
+                <h3 class="truck-icon" style="color: black;"><i style="color: rgb(255, 166, 0);" class="fa fa-truck" style="font-size:30px"></i> Fast Delivery
+                </h3>
+            </div>
+
+        </div>
+        <div class="footer-container">
+            <div class="footer-container-item">
+                <div class="footer-items">
+                    <h2> SPORTS VERSE</h2>
+                    <a id="footer-link" href="./About Us page/about.html">About Us</a>
+                    <i class="fa fa-envelope-o" style="font-size:14px"> &ensp; support@sportsverse.com</i>
+                    <i class="fa fa-phone" style="font-size:14px"> &ensp; (123) 456-7890</i>
+                </div>
+                <div class="footer-items">
+                    <h2>OUR SERVICES</h2>
+                    <button type="button" class="modal-button" data-toggle="modal" data-target="#exampleModal">
+                        Shipping & Returns
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLabel">Shipping & Returns</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Shipping Policy</h4>
+                                    At SportsVerse, we strive to deliver your order as quickly and efficiently as
+                                    possible.<br>
+
+                                    <b>Processing Time:</b> Orders are typically processed within 1-2 business days. Orders
+                                    placed on weekends or holidays will be processed on the next business day.<br>
+                                    <b>Shipping Options:</b> We offer a variety of shipping options at checkout, including
+                                    standard and expedited shipping. Delivery times may vary depending on your location
+                                    and selected shipping method.<br>
+                                    <b>Shipping Fees:</b> Shipping costs are calculated based on the size, weight, and
+                                    destination of your order and will be shown at checkout.<br>
+                                    <b>Order Tracking:</b> Once your order is shipped, we will email you a tracking link so you
+                                    can follow its progress.<br>
+                                    <h4>Return Policy</h4>
+                                    We do not offer any return facility as of now.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <button type="button" class="modal-button" data-toggle="modal" data-target="#exampleModal2">
+                        FAQ
+                    </button>
+
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLabel2">FAQ</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <b>1. What is the estimated delivery time for my order?</b><br>
+                                    Delivery times vary based on your location and the shipping method selected at
+                                    checkout.
+                                    Typically, orders arrive within 3-7 business days. You can track your order status
+                                    in
+                                    your account or through the tracking link sent to your email.<br>
+                                    <b>2. What is your return policy?</b><br>
+                                    We do not offer returns as of now.<br>
+                                    <b>3. How do I find the right size for my sports gear?</b><br>
+                                    Each product page includes a sizing guide to help you choose the perfect fit. If you
+                                    need additional help, feel free to reach out to our customer service team.<br>
+                                    <b>4. What payment methods do you accept?</b><br>
+                                    We accept major credit and debit cards (Visa, MasterCard, American Express).<br>
+                                    <b>5. Can I track my order?</b><br>
+                                    Yes, once your order is shipped, you will receive a tracking link via email. <br>
+                                    <b>6. How can I contact customer support?</b><br>
+                                    You can reach our customer support team via email at support@sportsverse.com or call
+                                    us
+                                    at (123) 456-7890. We’re available Monday to Friday, 9 AM - 6 PM.<br>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="footer-items">
+                    <h2>LEGAL</h2>
+                    <button type="button" class="modal-button" data-toggle="modal" data-target="#exampleModal3">
+                        Terms and Conditions
+                    </button>
+
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLabel3">Terms and Conditions </h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Welcome to SportsVerse! By accessing or using our website, you agree to be bound by
+                                    these
+                                    Terms and Conditions. Please read them carefully before using our services.<br><br>
+
+                                    <b> 1. General</b><br>
+                                    By using our website, you agree to these terms. If you disagree with any part, you
+                                    may
+                                    not
+                                    access our services.
+                                    We reserve the right to modify these terms at any time. Changes will be posted here,
+                                    and
+                                    continued use of the site implies acceptance of any changes.<br><br>
+                                    <b>2. Products and Orders</b><br>
+                                    Product Descriptions: We strive to provide accurate product information. However, we
+                                    do
+                                    not
+                                    warrant that descriptions or other content are error-free.<br>
+                                    Availability: All products are subject to availability. We reserve the right to
+                                    limit
+                                    quantities or discontinue products without notice.<br>
+                                    Order Acceptance: We reserve the right to refuse or cancel any order if fraudulent
+                                    or
+                                    unauthorized activity is suspected.<br>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <button type="button" class="modal-button" data-toggle="modal" data-target="#exampleModal4">
+                        Privacy Policies
+                    </button>
+
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalLabel4">Privacy Policies</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    At SportsVerse, we respect your privacy and are committed to protecting your
+                                    personal information. This policy outlines how we collect, use, and protect your
+                                    data.<br><br>
+
+                                    <b>1. Information Collection</b><br>
+                                    We collect information when you visit our website, create an account, place an
+                                    order, or contact customer support. This may include your name, email address,
+                                    shipping address, payment information, and browsing behavior.<br><br>
+                                    <b>2. Use of Information</b><br>
+                                    We use your information to process orders, manage your account, improve our website,
+                                    and provide customer support. We may also use it for marketing purposes with your
+                                    consent.<br><br>
+                                    <b>3. Information Sharing</b><br>
+                                    We do not sell or rent your information to third parties. We may share data with
+                                    trusted service providers to help process orders or improve our services, but only
+                                    as necessary and under strict confidentiality.<br>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-items">
+                    <h2> FOLLOW US</h2>
+                    <div class="icon">
+                        <a href="https://github.com/AMARNAYAK7262/DTA-project" target="_blank"><i
+                                class="fa fa-instagram" style="font-size:30px"></i></a>
+                        <a href="https://github.com/AMARNAYAK7262/DTA-project" target="_blank"><i class="fa fa-twitter"
+                                style="font-size:30px"></i></a>
+                        <a href="https://github.com/AMARNAYAK7262/DTA-project" target="_blank"><i class="fa fa-facebook"
+                                style="font-size:30px"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="display: flex; justify-content: space-evenly; margin-right: 32px; margin-left: 32px; align-items: center;"
+                    class="lastt">
+                    <div style="display: flex; align-items: center; color: seashell; gap: 12px;" class="last">
+                        <i class="fa fa-spinner" style="font-size:42px"></i>
+                        <div>
+                            <h3>100% Secure Transaction</h3>
+                            <p>Secure SSL Encryption</p>
+                        </div>
+
+                    </div>
+                    <div class="payment-icon"><i class="fa fa-cc-mastercard" style="font-size:30px"></i>
+                        <i class="fa fa-cc-visa" style="font-size:30px"></i>
+                        <i class="fa fa-cc-diners-club" style="font-size:30px"></i>
+                        <i class="fa fa-cc-paypal" style="font-size:30px"></i>
+                        <i class="fa fa-credit-card" style="font-size:30px"></i></i>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;
+            justify-content: center; color: seashell;" class="copy">© 2024 SportsVerse India Pvt Ltd. All rights
+                reserved.</div>
+        </div>
+
+
+    </footer>
+  </body>
+</html>
